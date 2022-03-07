@@ -1,0 +1,37 @@
+1.setwd() - to set tha path
+ 
+              a)using \\ 
+              b)using /
+2.read.csv()
+3.fix(<variable name>)   - get data into editor mode
+4.names(data) <- c("Age","Gender","Accommodation") - to rename columns
+5.data$Gender <- factor(data$Gender,c(1,2),c("Male","Female"))  - to rename categorical data
+6.attach(<add variable that assigned to import the file>) - to attach data
+7.'#Frequency Table
+gender.freq <- table(Gender)  - to create frequency tables
+
+8.Create pie Chatrs - pie(<frequency table>,<add a name to the chart>)
+9.#Bar charts
+create Bar charts - barplots(<frequency table>,<add a name to the hart>,<give a name for y access>)
+
+10.abline(h=0) - To start with from the 0th from X axis
+
+11.#Boxplot
+boxplot(Age,main="Boxplots for Age",ylab = "Age",outpch=8)
+
+12.#Two-way frequency table
+gender_acc.freq <-table(Gender,Accommodation)
+
+13.#stacked bar charts
+barplot(gender_acc.freq,main = "Gender & Accommodation",legend = rownames(gender_acc.freq))
+
+14.#clustered bar chart
+barplot(gender_acc.freq,beside = TRUE , main = "Gender & Accommodation",legend = rownames(gender_acc.freq))
+
+15.#Side-By-side boxplots
+boxplot(Age~Gender,main = "Boxplots for Age by Gender",xlab = "Gender",ylab = "Age")
+
+16.#2 categorical with a numerical
+xtabs(Age~Gender+Accommodation)/gender_acc.freq
+
+
